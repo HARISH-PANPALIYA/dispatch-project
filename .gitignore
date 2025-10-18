@@ -1,0 +1,34 @@
+# IDE/OS Generated Files
+.vscode/
+*.swp
+.DS_Store
+
+# --- CMake Build Files ---
+# Ignore the entire build directory
+/backend-cpp/build/
+
+# Ignore the actual compiled executable (we only commit source code)
+/backend-cpp/*.exe
+
+# Ignore CMake cache and config files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.lib
+
+# --- Data and External Dependencies (Optional) ---
+# If you downloaded external libraries into your project, ignore them
+/backend-cpp/asio-master/
+/backend-cpp/crow-master/
+/backend-cpp/json-develop/
+
+# Ignore large/local data files if they are not necessary for setup
+/backend-cpp/data/*.json
+# Uncomment the line above if your JSON data is too big/complex to commit.
+# If your JSON data is small and necessary to run, REMOVE the line above.

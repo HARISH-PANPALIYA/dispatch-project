@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Dispatch Center (C++ Backend)</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mapid"></div>
+    <div id="sidebar">
+        <h2 class="title">Emergency Dispatch Center</h2>
+        <div id="status-box">
+            <p>Units: <span id="unit-count">...</span></p>
+            <p>Active Incidents: <span id="incident-count">...</span></p>
+        </div>
+        
+        <button id="report-btn" onclick="startNewIncident()">Report New Incident</button>
+        <button onclick="refreshMapData()">Refresh Data</button>
+        <button onclick="centerMap()">Center Map</button>
+
+        <div id="instructions">
+            <p><strong>Instructions:</strong></p>
+            <ul>
+                <li>Click "Report New Incident" then click a location on the map.</li>
+                <li>Fill details and click "Dispatch Unit".</li>
+                <li>Use "Refresh Data" to see updated statuses.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="incident-form-overlay" class="hidden">
+        <div id="incident-form">
+            <h3>Report Incident</h3>
+            <p>Location: <span id="incident-coords"></span></p>
+            <textarea id="incident-details" placeholder="Details (e.g., Building collapse, 2 trapped)" rows="3"></textarea>
+            <button onclick="reportAndDispatch()">Dispatch Unit</button>
+            <button onclick="cancelReport()">Cancel</button>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

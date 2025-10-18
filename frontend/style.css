@@ -1,0 +1,54 @@
+body { margin: 0; font-family: Arial, sans-serif; }
+#mapid { height: 100vh; width: 100%; position: absolute; }
+#sidebar {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    z-index: 1000; 
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+.title { color: #cc0000; margin-top: 0; }
+#status-box { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+button {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-weight: bold;
+}
+#report-btn { background-color: #4CAF50; color: white; }
+#report-btn:hover { background-color: #45a049; }
+
+/* Incident Form Overlay Styling */
+.hidden { display: none !important; }
+#incident-form-overlay {
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1001; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+#incident-form {
+    background: white; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    width: 300px;
+}
+#incident-form textarea { width: 100%; margin: 10px 0; padding: 8px; box-sizing: border-box; }
+#incident-form button:nth-child(2) { background-color: #cc0000; color: white; }
+#incident-form button:nth-child(3) { background-color: #f4f4f4; color: #333; }
+
+/* Map Icon Customization */
+.available-unit { background-color: green; border-color: green; }
+.dispatched-unit { background-color: orange; border-color: orange; }
+.incident-icon { background-color: red; border-color: red; }
